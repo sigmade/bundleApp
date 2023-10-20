@@ -1,5 +1,5 @@
 import publicFunc from './helper.js';
-import './css/style.css';
+import './css/style.scss';
 //import $ from 'jquery';
 
 //S$('#header1').html('Измененный заголовок');

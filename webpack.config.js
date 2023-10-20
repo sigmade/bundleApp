@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
  
 const conf = {
    entry: './src/index.js',
@@ -14,14 +15,20 @@ const conf = {
             exclude: '/node_modules/'
         },
         {
-            test: /\.css$/,
+            test: /\.scss$/i,
             use: [
-                'style-loader',
-                'css-loader'
-            ]
+              MiniCssExtractPlugin.loader,
+              'css-loader',
+              'sass-loader',
+            ],
         }
     ]
-   }
+   },
+   plugins: [
+    new MiniCssExtractPlugin({
+        filename: 'styles.css',
+      }),
+  ],
 }
  
 module.exports = conf;
