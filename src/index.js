@@ -1,6 +1,6 @@
 import publicFunc from './helper.js'
-import $ from 'jquery';
+//import $ from 'jquery';
 
-$('#header1').html('Измененный заголовок');
+//S$('#header1').html('Измененный заголовок');
 publicFunc("Bob");
 console.log("Index");
